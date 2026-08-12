@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const title = "Áreas de atuação | Instituto CRIAS";
 const description =
