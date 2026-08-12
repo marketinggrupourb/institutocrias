@@ -42,7 +42,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-accent"
               >
-                @instituto.crias
+                instituto.crias
               </a>
             </li>
           </ul>
