@@ -118,12 +118,18 @@ function Index() {
             Seis frentes que estruturam nosso trabalho
           </h2>
           <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-            {areas.map((area) => (
-              <div key={area.name} className="bg-card p-8">
-                <h3 className="text-lg font-bold">{area.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{area.text}</p>
-              </div>
-            ))}
+            {areas.map((area) => {
+              const Icon = area.icon;
+              return (
+                <div key={area.name} className="bg-card p-8">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-secondary">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </span>
+                  <h3 className="mt-4 text-lg font-bold">{area.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{area.text}</p>
+                </div>
+              );
+            })}
           </div>
           <Link
             to="/areas-de-atuacao"
