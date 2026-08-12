@@ -25,17 +25,19 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const areas = [
+const areas: { name: string; icon: LucideIcon; text: string }[] = [
   {
     name: "Desenvolvimento Social",
+    icon: Heart,
     text: "Inclusão social, fortalecimento comunitário e promoção de direitos.",
   },
-  { name: "Educação", text: "Cursos, oficinas, formação profissional e capacitação." },
-  { name: "Cultura", text: "Festivais, produção cultural, economia criativa e patrimônio." },
-  { name: "Esporte", text: "Formação esportiva, eventos e inclusão por meio do esporte." },
-  { name: "Empregabilidade", text: "Qualificação profissional, empreendedorismo e renda." },
+  { name: "Educação", icon: GraduationCap, text: "Cursos, oficinas, formação profissional e capacitação." },
+  { name: "Cultura", icon: Palette, text: "Festivais, produção cultural, economia criativa e patrimônio." },
+  { name: "Esporte", icon: Trophy, text: "Formação esportiva, eventos e inclusão por meio do esporte." },
+  { name: "Empregabilidade", icon: Briefcase, text: "Qualificação profissional, empreendedorismo e renda." },
   {
     name: "Desenvolvimento Territorial",
+    icon: MapPin,
     text: "Projetos comunitários, desenvolvimento local e fortalecimento institucional.",
   },
 ];
