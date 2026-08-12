@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Globe } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -35,8 +35,15 @@ export function Footer() {
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <Globe className="h-4 w-4 text-accent" />
-              <span>crias.org.br</span>
+              <Instagram className="h-4 w-4 text-accent" />
+              <a
+                href="https://www.instagram.com/instituto.crias/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent"
+              >
+                @instituto.crias
+              </a>
             </li>
           </ul>
           <Link
