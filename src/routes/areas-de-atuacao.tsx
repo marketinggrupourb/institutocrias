@@ -57,19 +57,25 @@ function Areas() {
       />
 
       <section className="container-crias grid gap-8 py-20 md:grid-cols-2 md:py-28 lg:grid-cols-3">
-        {areas.map((area) => (
-          <article key={area.name} className="rounded-3xl border border-border bg-card p-8">
-            <h2 className="text-xl font-bold">{area.name}</h2>
-            <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
-              {area.items.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {areas.map((area) => {
+          const Icon = area.icon;
+          return (
+            <article key={area.name} className="rounded-3xl border border-border bg-card p-8">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary">
+                <Icon className="h-5 w-5 text-primary" />
+              </span>
+              <h2 className="mt-5 text-xl font-bold">{area.name}</h2>
+              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
+                {area.items.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          );
+        })}
       </section>
 
       <section className="border-y border-border bg-secondary/50 py-20 md:py-24">
