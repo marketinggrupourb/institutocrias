@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const title = "Áreas de atuação | Instituto CRIAS";
 const description =
@@ -20,23 +22,27 @@ export const Route = createFileRoute("/areas-de-atuacao")({
   component: Areas,
 });
 
-const areas: { name: string; items: string[] }[] = [
+const areas: { name: string; icon: LucideIcon; items: string[] }[] = [
   {
     name: "Desenvolvimento Social",
+    icon: Heart,
     items: ["Inclusão social", "Fortalecimento comunitário", "Proteção e promoção de direitos"],
   },
-  { name: "Educação", items: ["Cursos", "Oficinas", "Formação profissional", "Capacitação"] },
+  { name: "Educação", icon: GraduationCap, items: ["Cursos", "Oficinas", "Formação profissional", "Capacitação"] },
   {
     name: "Cultura",
+    icon: Palette,
     items: ["Festivais", "Produção cultural", "Economia criativa", "Patrimônio cultural"],
   },
-  { name: "Esporte", items: ["Formação esportiva", "Eventos", "Inclusão por meio do esporte"] },
+  { name: "Esporte", icon: Trophy, items: ["Formação esportiva", "Eventos", "Inclusão por meio do esporte"] },
   {
     name: "Empregabilidade",
+    icon: Briefcase,
     items: ["Qualificação profissional", "Empreendedorismo", "Geração de renda"],
   },
   {
     name: "Desenvolvimento Territorial",
+    icon: MapPin,
     items: ["Projetos comunitários", "Fortalecimento institucional", "Desenvolvimento local"],
   },
 ];
@@ -51,19 +57,25 @@ function Areas() {
       />
 
       <section className="container-crias grid gap-8 py-20 md:grid-cols-2 md:py-28 lg:grid-cols-3">
-        {areas.map((area) => (
-          <article key={area.name} className="rounded-3xl border border-border bg-card p-8">
-            <h2 className="text-xl font-bold">{area.name}</h2>
-            <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
-              {area.items.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {areas.map((area) => {
+          const Icon = area.icon;
+          return (
+            <article key={area.name} className="rounded-3xl border border-border bg-card p-8">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary">
+                <Icon className="h-5 w-5 text-primary" />
+              </span>
+              <h2 className="mt-5 text-xl font-bold">{area.name}</h2>
+              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
+                {area.items.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          );
+        })}
       </section>
 
       <section className="border-y border-border bg-secondary/50 py-20 md:py-24">

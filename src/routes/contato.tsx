@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Globe } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 
 const title = "Contato | Instituto CRIAS";
@@ -49,11 +49,18 @@ function Contato() {
             </li>
             <li className="flex items-start gap-4">
               <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary">
-                <Globe className="h-5 w-5 text-primary" />
+                <Instagram className="h-5 w-5 text-primary" />
               </span>
               <div>
-                <p className="font-semibold">Site</p>
-                <p className="text-muted-foreground">crias.org.br</p>
+                <p className="font-semibold">Instagram</p>
+                <a
+                  href="https://www.instagram.com/instituto.crias/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  @instituto.crias
+                </a>
               </div>
             </li>
           </ul>

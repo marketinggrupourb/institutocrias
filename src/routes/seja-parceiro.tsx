@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { CheckCircle2 } from "lucide-react";
 import parceirosImg from "@/assets/parceiros.jpg";
 
 const title = "Seja um parceiro | Instituto CRIAS";
@@ -54,7 +55,7 @@ function SejaParceiro() {
           <ul className="mt-8 space-y-4">
             {compromissos.map((item) => (
               <li key={item} className="flex gap-3 text-muted-foreground">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 {item}
               </li>
             ))}

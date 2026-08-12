@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { ShieldCheck, BarChart3, FileCheck, Scale } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const title = "Transparência | Instituto CRIAS";
 const description =
@@ -31,28 +33,22 @@ function Transparencia() {
 
       <section className="container-crias grid gap-8 py-20 md:grid-cols-2 md:py-28">
         {[
-          [
-            "Gestão responsável",
-            "Controles administrativos e financeiros aplicados a todas as etapas dos projetos.",
-          ],
-          [
-            "Monitoramento e avaliação",
-            "Acompanhamento sistemático de indicadores, metas e resultados alcançados.",
-          ],
-          [
-            "Prestação de contas",
-            "Relatórios técnicos e financeiros entregues a financiadores, órgãos públicos e parceiros.",
-          ],
-          [
-            "Conformidade",
-            "Aderência às regras de editais, convênios, leis de incentivo e demais fontes de recurso.",
-          ],
-        ].map(([name, text]) => (
-          <article key={name} className="rounded-3xl border border-border bg-card p-8">
-            <h2 className="text-xl font-bold">{name}</h2>
-            <p className="mt-3 leading-relaxed text-muted-foreground">{text}</p>
-          </article>
-        ))}
+          ["Gestão responsável", ShieldCheck, "Controles administrativos e financeiros aplicados a todas as etapas dos projetos."],
+          ["Monitoramento e avaliação", BarChart3, "Acompanhamento sistemático de indicadores, metas e resultados alcançados."],
+          ["Prestação de contas", FileCheck, "Relatórios técnicos e financeiros entregues a financiadores, órgãos públicos e parceiros."],
+          ["Conformidade", Scale, "Aderência às regras de editais, convênios, leis de incentivo e demais fontes de recurso."],
+        ].map(([name, icon, text]) => {
+          const Icon = icon as LucideIcon;
+          return (
+            <article key={name as string} className="rounded-3xl border border-border bg-card p-8">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary">
+                <Icon className="h-5 w-5 text-primary" />
+              </span>
+              <h2 className="mt-5 text-xl font-bold">{name as string}</h2>
+              <p className="mt-3 leading-relaxed text-muted-foreground">{text as string}</p>
+            </article>
+          );
+        })}
       </section>
 
       <section className="border-y border-border bg-secondary/50 py-16">

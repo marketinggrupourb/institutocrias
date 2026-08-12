@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
 import { CtaBand } from "@/components/site/CtaBand";
 import heroImg from "@/assets/hero-crias.jpg";
+import type { LucideIcon } from "lucide-react";
 import educacaoImg from "@/assets/educacao.jpg";
 import esporteImg from "@/assets/esporte.jpg";
 import culturaImg from "@/assets/cultura.jpg";
@@ -24,17 +25,19 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const areas = [
+const areas: { name: string; icon: LucideIcon; text: string }[] = [
   {
     name: "Desenvolvimento Social",
+    icon: Heart,
     text: "Inclusão social, fortalecimento comunitário e promoção de direitos.",
   },
-  { name: "Educação", text: "Cursos, oficinas, formação profissional e capacitação." },
-  { name: "Cultura", text: "Festivais, produção cultural, economia criativa e patrimônio." },
-  { name: "Esporte", text: "Formação esportiva, eventos e inclusão por meio do esporte." },
-  { name: "Empregabilidade", text: "Qualificação profissional, empreendedorismo e renda." },
+  { name: "Educação", icon: GraduationCap, text: "Cursos, oficinas, formação profissional e capacitação." },
+  { name: "Cultura", icon: Palette, text: "Festivais, produção cultural, economia criativa e patrimônio." },
+  { name: "Esporte", icon: Trophy, text: "Formação esportiva, eventos e inclusão por meio do esporte." },
+  { name: "Empregabilidade", icon: Briefcase, text: "Qualificação profissional, empreendedorismo e renda." },
   {
     name: "Desenvolvimento Territorial",
+    icon: MapPin,
     text: "Projetos comunitários, desenvolvimento local e fortalecimento institucional.",
   },
 ];
@@ -115,12 +118,18 @@ function Index() {
             Seis frentes que estruturam nosso trabalho
           </h2>
           <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-            {areas.map((area) => (
-              <div key={area.name} className="bg-card p-8">
-                <h3 className="text-lg font-bold">{area.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{area.text}</p>
-              </div>
-            ))}
+            {areas.map((area) => {
+              const Icon = area.icon;
+              return (
+                <div key={area.name} className="bg-card p-8">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-secondary">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </span>
+                  <h3 className="mt-4 text-lg font-bold">{area.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{area.text}</p>
+                </div>
+              );
+            })}
           </div>
           <Link
             to="/areas-de-atuacao"
