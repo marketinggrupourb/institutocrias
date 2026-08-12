@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
+import { CheckCircle2 } from "lucide-react";
 import parceirosImg from "@/assets/parceiros.jpg";
 
 const title = "Seja um parceiro | Instituto CRIAS";
