@@ -1,0 +1,59 @@
+import { Link } from "@tanstack/react-router";
+import { Mail, Globe } from "lucide-react";
+import { Logo } from "./Logo";
+
+export function Footer() {
+  return (
+    <footer className="mt-24 bg-primary-deep text-primary-foreground">
+      <div className="container-crias grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <Logo tone="light" />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
+            Instituto de Criação e Ações Sociais. Organização da sociedade civil sem fins
+            lucrativos dedicada à transformação social, inclusão e cidadania.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent">Navegue</h2>
+          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
+            <li><Link to="/quem-somos" className="hover:text-accent">Quem somos</Link></li>
+            <li><Link to="/areas-de-atuacao" className="hover:text-accent">Áreas de atuação</Link></li>
+            <li><Link to="/projetos" className="hover:text-accent">Projetos</Link></li>
+            <li><Link to="/noticias" className="hover:text-accent">Notícias</Link></li>
+            <li><Link to="/transparencia" className="hover:text-accent">Transparência</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent">Contato</h2>
+          <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-accent" />
+              <a href="mailto:contato@crias.org.br" className="hover:text-accent">
+                contato@crias.org.br
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Globe className="h-4 w-4 text-accent" />
+              <span>crias.org.br</span>
+            </li>
+          </ul>
+          <Link
+            to="/seja-parceiro"
+            className="mt-6 inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+          >
+            Seja um parceiro
+          </Link>
+        </div>
+      </div>
+
+      <div className="border-t border-primary-foreground/15">
+        <div className="container-crias flex flex-col gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} Instituto CRIAS — Instituto de Criação e Ações Sociais.</p>
+          <p>Ser luz, agentes de transformação.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

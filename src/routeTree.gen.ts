@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AreasDeAtuacaoRouteImport } from './routes/areas-de-atuacao'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as NoticiasRouteImport } from './routes/noticias'
+import { Route as ProjetosRouteImport } from './routes/projetos'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as SejaParceiroRouteImport } from './routes/seja-parceiro'
+import { Route as TransparenciaRouteImport } from './routes/transparencia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AreasDeAtuacaoRoute = AreasDeAtuacaoRouteImport.update({
+  id: '/areas-de-atuacao',
+  path: '/areas-de-atuacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasRoute = NoticiasRouteImport.update({
+  id: '/noticias',
+  path: '/noticias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosRoute = ProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SejaParceiroRoute = SejaParceiroRouteImport.update({
+  id: '/seja-parceiro',
+  path: '/seja-parceiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransparenciaRoute = TransparenciaRouteImport.update({
+  id: '/transparencia',
+  path: '/transparencia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/noticias': typeof NoticiasRoute
+  '/projetos': typeof ProjetosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/seja-parceiro': typeof SejaParceiroRoute
+  '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/noticias': typeof NoticiasRoute
+  '/projetos': typeof ProjetosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/seja-parceiro': typeof SejaParceiroRoute
+  '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/areas-de-atuacao': typeof AreasDeAtuacaoRoute
+  '/contato': typeof ContatoRoute
+  '/noticias': typeof NoticiasRoute
+  '/projetos': typeof ProjetosRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/seja-parceiro': typeof SejaParceiroRoute
+  '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/areas-de-atuacao'
+    | '/contato'
+    | '/noticias'
+    | '/projetos'
+    | '/quem-somos'
+    | '/seja-parceiro'
+    | '/transparencia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/areas-de-atuacao'
+    | '/contato'
+    | '/noticias'
+    | '/projetos'
+    | '/quem-somos'
+    | '/seja-parceiro'
+    | '/transparencia'
+  id:
+    | '__root__'
+    | '/'
+    | '/areas-de-atuacao'
+    | '/contato'
+    | '/noticias'
+    | '/projetos'
+    | '/quem-somos'
+    | '/seja-parceiro'
+    | '/transparencia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreasDeAtuacaoRoute: typeof AreasDeAtuacaoRoute
+  ContatoRoute: typeof ContatoRoute
+  NoticiasRoute: typeof NoticiasRoute
+  ProjetosRoute: typeof ProjetosRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  SejaParceiroRoute: typeof SejaParceiroRoute
+  TransparenciaRoute: typeof TransparenciaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/areas-de-atuacao': {
+      id: '/areas-de-atuacao'
+      path: '/areas-de-atuacao'
+      fullPath: '/areas-de-atuacao'
+      preLoaderRoute: typeof AreasDeAtuacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias': {
+      id: '/noticias'
+      path: '/noticias'
+      fullPath: '/noticias'
+      preLoaderRoute: typeof NoticiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos': {
+      id: '/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seja-parceiro': {
+      id: '/seja-parceiro'
+      path: '/seja-parceiro'
+      fullPath: '/seja-parceiro'
+      preLoaderRoute: typeof SejaParceiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transparencia': {
+      id: '/transparencia'
+      path: '/transparencia'
+      fullPath: '/transparencia'
+      preLoaderRoute: typeof TransparenciaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreasDeAtuacaoRoute: AreasDeAtuacaoRoute,
+  ContatoRoute: ContatoRoute,
+  NoticiasRoute: NoticiasRoute,
+  ProjetosRoute: ProjetosRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  SejaParceiroRoute: SejaParceiroRoute,
+  TransparenciaRoute: TransparenciaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
