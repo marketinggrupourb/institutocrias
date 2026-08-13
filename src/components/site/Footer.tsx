@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
+import { GrafismosConjunto } from "./Grafismos";
 
 export function Footer() {
   return (
-    <footer className="mt-24 bg-primary-deep text-primary-foreground">
-      <div className="container-crias grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
+    <footer className="relative mt-24 overflow-hidden bg-primary-deep text-primary-foreground">
+      <GrafismosConjunto className="pointer-events-none absolute -bottom-10 right-0 hidden w-[420px] text-primary-foreground/[0.06] lg:block" />
+      <div className="container-crias relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <Logo tone="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">

@@ -74,7 +74,9 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-full bg-accent md:block" />
+            <div className="absolute -left-6 -top-6 hidden h-24 w-24 items-center justify-center rounded-full bg-accent md:flex">
+              <GrafismoCoracao className="h-12 w-12 text-accent-foreground" />
+            </div>
             <img
               src={heroImg}
               alt="Grupo de pessoas de diferentes idades em uma oficina comunitária do Instituto CRIAS"
