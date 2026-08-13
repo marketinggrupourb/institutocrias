@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { Search, ClipboardList, Rocket, BarChart3, FileCheck } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import heroImg from "@/assets/hero-crias.jpg";
 
 const title = "Quem somos | Instituto CRIAS";
