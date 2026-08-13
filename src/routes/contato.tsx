@@ -59,7 +59,7 @@ function Contato() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary"
                 >
-                  @instituto.crias
+                  instituto.crias
                 </a>
               </div>
             </li>
