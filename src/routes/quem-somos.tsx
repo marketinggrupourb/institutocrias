@@ -75,20 +75,26 @@ function QuemSomos() {
         </h2>
         <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
           {[
-            ["Diagnóstico", "Identificação das necessidades e oportunidades."],
-            ["Planejamento", "Estruturação técnica, financeira e operacional."],
-            ["Execução", "Gestão técnica, administrativa e financeira dos projetos."],
-            ["Monitoramento", "Acompanhamento de indicadores e resultados."],
-            ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos."],
-          ].map(([name, text], i) => (
-            <li key={name} className="bg-card p-8">
-              <span className="font-display text-sm font-bold text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-3 text-lg font-bold">{name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
-            </li>
-          ))}
+            ["Diagnóstico", Search, "Identificação das necessidades e oportunidades."],
+            ["Planejamento", ClipboardList, "Estruturação técnica, financeira e operacional."],
+            ["Execução", Rocket, "Gestão técnica, administrativa e financeira dos projetos."],
+            ["Monitoramento", BarChart3, "Acompanhamento de indicadores e resultados."],
+            ["Prestação de contas", FileCheck, "Transparência e conformidade na aplicação dos recursos."],
+          ].map(([name, icon, text], i) => {
+            const Icon = icon as LucideIcon;
+            return (
+              <li key={name as string} className="bg-card p-8">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary">
+                  <Icon className="h-5 w-5 text-primary" />
+                </span>
+                <span className="mt-3 block font-display text-sm font-bold text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-2 text-lg font-bold">{name as string}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text as string}</p>
+              </li>
+            );
+          })}
         </ol>
       </section>
 
