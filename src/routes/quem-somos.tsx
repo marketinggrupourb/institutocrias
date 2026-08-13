@@ -57,8 +57,11 @@ function QuemSomos() {
         <div className="container-crias">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Propósito</p>
           <blockquote className="mt-6 max-w-4xl font-display text-3xl font-extrabold leading-[1.2] text-accent md:text-5xl">
-            Ser luz, agentes de transformação, doadores de conhecimento, servidores de coração,
-            propagadores da esperança e do amor, ponte que conecta criatura e criador.
+            Ser luz, agentes de transformação, <br />
+            doadores de conhecimento, <br />
+            servidores de coração, <br />
+            propagadores da esperança e do amor, <br />
+            ponte que conecta criatura e criador.
           </blockquote>
         </div>
       </section>
