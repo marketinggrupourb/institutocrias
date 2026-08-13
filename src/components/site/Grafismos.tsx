@@ -5,7 +5,7 @@ type GrafismoProps = React.SVGProps<SVGSVGElement>;
 
 export function GrafismoCoracao({ className, ...props }: GrafismoProps) {
   return (
-    <svg viewBox="0 0 340 140" fill="currentColor" aria-hidden="true" className={className} {...props}>
+    <svg viewBox="0 0 135 140" fill="currentColor" aria-hidden="true" className={className} {...props}>
       <path d="M333.66,92.57c-16.41-9.61-37.33-6.46-50.75,7.01l-.06.06s-.04-.04-.06-.06c-16.53-16.53-43.34-16.53-59.87,0-16.53,16.53-16.53,43.34,0,59.87.4.4.84.75,1.26,1.14l48.3,48.3c5.76,5.76,15.11,5.76,20.87,0l49.44-49.44h0s0,0,0,0c19.16-19.16,16.12-52.11-9.12-66.89Z" transform="translate(-215 -80)" />
     </svg>
   );
@@ -13,7 +13,7 @@ export function GrafismoCoracao({ className, ...props }: GrafismoProps) {
 
 export function GrafismoPlay({ className, ...props }: GrafismoProps) {
   return (
-    <svg viewBox="0 0 132 136" fill="currentColor" aria-hidden="true" className={className} {...props}>
+    <svg viewBox="0 0 135 146" fill="currentColor" aria-hidden="true" className={className} {...props}>
       <path d="M531.55,145.26l-117.91-62.03c-3.64-1.92-8.02.73-8.02,4.84v124.05c0,4.12,4.38,6.76,8.02,4.84l117.91-62.03c3.9-2.05,3.9-7.64,0-9.69Z" transform="translate(-403 -76)" />
     </svg>
   );
@@ -21,7 +21,7 @@ export function GrafismoPlay({ className, ...props }: GrafismoProps) {
 
 export function GrafismoBalao({ className, ...props }: GrafismoProps) {
   return (
-    <svg viewBox="0 0 130 122" fill="currentColor" aria-hidden="true" className={className} {...props}>
+    <svg viewBox="0 0 131 124" fill="currentColor" aria-hidden="true" className={className} {...props}>
       <path d="M135.29,194.54c11.25-11.43,18.2-27.11,18.2-44.43,0-34.99-28.38-63.39-63.39-63.39s-63.39,28.4-63.39,63.39c0,28.38,18.67,52.41,44.39,60.49,5.99,1.89,12.39,2.91,19,2.91h55.28c3.08,0,4.64-3.69,2.52-5.91l-12.6-13.05Z" transform="translate(-25 -85)" />
     </svg>
   );
