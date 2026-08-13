@@ -73,13 +73,15 @@ function QuemSomos() {
           Um modelo estruturado de desenvolvimento de projetos
         </h2>
         <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
-          {[
-            ["Diagnóstico", "Identificação das necessidades e oportunidades.", Search],
-            ["Planejamento", "Estruturação técnica, financeira e operacional.", Lightbulb],
-            ["Execução", "Gestão técnica, administrativa e financeira dos projetos.", ClipboardCheck],
-            ["Monitoramento", "Acompanhamento de indicadores e resultados.", ListChecks],
-            ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos.", Wallet],
-          ].map(([name, text, IconComponent], i) => (
+          {(
+            [
+              ["Diagnóstico", "Identificação das necessidades e oportunidades.", Search],
+              ["Planejamento", "Estruturação técnica, financeira e operacional.", Lightbulb],
+              ["Execução", "Gestão técnica, administrativa e financeira dos projetos.", ClipboardCheck],
+              ["Monitoramento", "Acompanhamento de indicadores e resultados.", ListChecks],
+              ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos.", Wallet],
+            ] as const
+          ).map(([name, text, IconComponent], i) => (
             <li key={name} className="bg-card p-8">
               <div className="flex items-center justify-between">
                 <span className="font-display text-sm font-bold text-accent">
