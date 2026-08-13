@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { ClipboardCheck, Lightbulb, ListChecks, Search, Wallet } from "lucide-react";
 import heroImg from "@/assets/hero-crias.jpg";
 
 const title = "Quem somos | Instituto CRIAS";
@@ -72,17 +73,22 @@ function QuemSomos() {
           Um modelo estruturado de desenvolvimento de projetos
         </h2>
         <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
-          {[
-            ["Diagnóstico", "Identificação das necessidades e oportunidades."],
-            ["Planejamento", "Estruturação técnica, financeira e operacional."],
-            ["Execução", "Gestão técnica, administrativa e financeira dos projetos."],
-            ["Monitoramento", "Acompanhamento de indicadores e resultados."],
-            ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos."],
-          ].map(([name, text], i) => (
+          {(
+            [
+              ["Diagnóstico", "Identificação das necessidades e oportunidades.", Search],
+              ["Planejamento", "Estruturação técnica, financeira e operacional.", Lightbulb],
+              ["Execução", "Gestão técnica, administrativa e financeira dos projetos.", ClipboardCheck],
+              ["Monitoramento", "Acompanhamento de indicadores e resultados.", ListChecks],
+              ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos.", Wallet],
+            ] as const
+          ).map(([name, text, IconComponent], i) => (
             <li key={name} className="bg-card p-8">
-              <span className="font-display text-sm font-bold text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <div className="flex items-center justify-between">
+                <span className="font-display text-sm font-bold text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <IconComponent className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
+              </div>
               <h3 className="mt-3 text-lg font-bold">{name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </li>
