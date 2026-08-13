@@ -79,13 +79,13 @@ function QuemSomos() {
             ["Execução", "Gestão técnica, administrativa e financeira dos projetos.", ClipboardCheck],
             ["Monitoramento", "Acompanhamento de indicadores e resultados.", ListChecks],
             ["Prestação de contas", "Transparência e conformidade na aplicação dos recursos.", Wallet],
-          ].map(([name, text, Icon], i) => (
+          ].map(([name, text, IconComponent], i) => (
             <li key={name} className="bg-card p-8">
               <div className="flex items-center justify-between">
                 <span className="font-display text-sm font-bold text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                {Icon && <Icon className="h-6 w-6 text-muted-foreground" aria-hidden="true" />}
+                <IconComponent className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
               </div>
               <h3 className="mt-3 text-lg font-bold">{name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
