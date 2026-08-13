@@ -15,7 +15,7 @@ export function PageHero({
           {title}
         </h1>
         {description && (
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
             {description}
           </p>
         )}

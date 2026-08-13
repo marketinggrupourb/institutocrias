@@ -26,7 +26,7 @@ function Contato() {
       <PageHero
         eyebrow="Contato"
         title="Fale conosco"
-        description="Quer propor uma parceria, conhecer nossos projetos ou ser voluntário? Escreva para o Instituto CRIAS."
+        description={"Quer propor uma parceria, conhecer nossos projetos ou ser voluntário?\nEntre em contato com o Instituto CRIAS."}
       />
 
       <section className="container-crias grid gap-12 py-20 md:py-28 lg:grid-cols-2">
