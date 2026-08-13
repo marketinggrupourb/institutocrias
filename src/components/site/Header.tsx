@@ -16,10 +16,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-primary shadow-sm shadow-primary-deep/20">
       <div className="container-crias flex h-20 items-center justify-between gap-6">
         <Link to="/" className="flex items-center" aria-label="Instituto CRIAS — página inicial">
-          <Logo />
+          <Logo tone="light" />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
@@ -27,7 +27,7 @@ export function Header() {
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground [&.active]:text-primary"
+              className="text-sm font-medium text-primary-foreground/80 transition-colors hover:text-primary-foreground [&.active]:text-accent"
             >
               {item.label}
             </Link>
@@ -37,7 +37,7 @@ export function Header() {
         <div className="hidden lg:block">
           <Link
             to="/seja-parceiro"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-deep"
+            className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
           >
             Seja um parceiro
           </Link>
@@ -46,7 +46,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary-foreground/30 text-primary-foreground lg:hidden"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
         >
@@ -55,14 +55,14 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-primary-foreground/15 bg-primary lg:hidden">
           <nav className="container-crias flex flex-col gap-1 py-4" aria-label="Navegação mobile">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-2 py-3 text-base font-medium text-foreground/80 hover:bg-secondary"
+                className="rounded-xl px-2 py-3 text-base font-medium text-primary-foreground/90 hover:bg-primary-deep/30"
               >
                 {item.label}
               </Link>
@@ -70,7 +70,7 @@ export function Header() {
             <Link
               to="/seja-parceiro"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground"
             >
               Seja um parceiro
             </Link>
