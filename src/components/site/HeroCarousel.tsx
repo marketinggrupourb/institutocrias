@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import heroImg from "@/assets/hero-crias.jpg";
+import educacaoImg from "@/assets/educacao.jpg";
+import esporteImg from "@/assets/esporte.jpg";
+import culturaImg from "@/assets/cultura.jpg";
 
 interface Slide {
   img: string;
@@ -13,7 +17,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&auto=format&fit=crop&q=80",
+    img: heroImg,
     eyebrow: "Instituto de Criação e Ações Sociais",
     title: (
       <>
@@ -27,7 +31,7 @@ const slides: Slide[] = [
     secondaryLink: { to: "/seja-parceiro", label: "Seja um parceiro" },
   },
   {
-    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&auto=format&fit=crop&q=80",
+    img: educacaoImg,
     eyebrow: "Educação",
     title: (
       <>
@@ -41,7 +45,7 @@ const slides: Slide[] = [
     secondaryLink: { to: "/projetos", label: "Ver projetos" },
   },
   {
-    img: "https://images.unsplash.com/photo-1461896836934- voices?w=1600&auto=format&fit=crop&q=80",
+    img: esporteImg,
     eyebrow: "Esporte",
     title: (
       <>
@@ -55,7 +59,7 @@ const slides: Slide[] = [
     secondaryLink: { to: "/projetos", label: "Ver projetos" },
   },
   {
-    img: "https://images.unsplash.com/photo-1511632765486-a01980e01a92?w=1600&auto=format&fit=crop&q=80",
+    img: culturaImg,
     eyebrow: "Cultura",
     title: (
       <>
