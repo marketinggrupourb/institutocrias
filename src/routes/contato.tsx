@@ -30,7 +30,29 @@ function Contato() {
       />
 
       <section className="container-crias grid gap-12 py-20 md:py-28 lg:grid-cols-2">
-        <div className="rounded-3xl border border-border bg-card p-8 md:p-10">
+        <div className="rounded-3xl bg-primary-deep p-8 text-primary-foreground md:p-10 lg:order-1">
+          <h2 className="text-2xl font-extrabold">Como podemos ajudar?</h2>
+          <ul className="mt-8 space-y-5 text-primary-foreground/80">
+            <li>
+              <span className="font-semibold text-accent">Empresas e investidores sociais:</span>{" "}
+              estruturação e execução de projetos com impacto mensurável.
+            </li>
+            <li>
+              <span className="font-semibold text-accent">Poder público e fundações:</span>{" "}
+              parcerias, convênios e projetos financiados por editais.
+            </li>
+            <li>
+              <span className="font-semibold text-accent">Organizações sociais:</span>{" "}
+              fortalecimento institucional e apoio na captação de recursos.
+            </li>
+            <li>
+              <span className="font-semibold text-accent">Voluntários e comunidade:</span>{" "}
+              participação nas ações e frentes de trabalho do Instituto.
+            </li>
+          </ul>
+        </div>
+
+        <div className="rounded-3xl border border-border bg-card p-8 md:p-10 lg:order-2">
           <h2 className="text-2xl font-extrabold">Canais oficiais</h2>
           <ul className="mt-8 space-y-6">
             <li className="flex items-start gap-4">
@@ -70,28 +92,6 @@ function Contato() {
           >
             Enviar e-mail
           </a>
-        </div>
-
-        <div className="rounded-3xl bg-primary-deep p-8 text-primary-foreground md:p-10">
-          <h2 className="text-2xl font-extrabold">Como podemos ajudar?</h2>
-          <ul className="mt-8 space-y-5 text-primary-foreground/80">
-            <li>
-              <span className="font-semibold text-accent">Empresas e investidores sociais:</span>{" "}
-              estruturação e execução de projetos com impacto mensurável.
-            </li>
-            <li>
-              <span className="font-semibold text-accent">Poder público e fundações:</span>{" "}
-              parcerias, convênios e projetos financiados por editais.
-            </li>
-            <li>
-              <span className="font-semibold text-accent">Organizações sociais:</span>{" "}
-              fortalecimento institucional e apoio na captação de recursos.
-            </li>
-            <li>
-              <span className="font-semibold text-accent">Voluntários e comunidade:</span>{" "}
-              participação nas ações e frentes de trabalho do Instituto.
-            </li>
-          </ul>
         </div>
       </section>
     </>
