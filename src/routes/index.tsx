@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
-import { GrafismoCoracao } from "@/components/site/Grafismos";
+import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { CtaBand } from "@/components/site/CtaBand";
-import heroImg from "@/assets/hero-crias.jpg";
 import type { LucideIcon } from "lucide-react";
 import educacaoImg from "@/assets/educacao.jpg";
 import esporteImg from "@/assets/esporte.jpg";
