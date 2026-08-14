@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
-import { GrafismoCoracao } from "@/components/site/Grafismos";
+import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { CtaBand } from "@/components/site/CtaBand";
-import heroImg from "@/assets/hero-crias.jpg";
 import type { LucideIcon } from "lucide-react";
 import educacaoImg from "@/assets/educacao.jpg";
 import esporteImg from "@/assets/esporte.jpg";
@@ -46,48 +45,7 @@ const areas: { name: string; icon: LucideIcon; text: string }[] = [
 function Index() {
   return (
     <>
-      <section className="border-b border-border bg-secondary/50">
-        <div className="container-crias grid items-center gap-14 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr]">
-          <div>
-            <p className="eyebrow">Instituto de Criação e Ações Sociais</p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.03] md:text-6xl">
-              Conectar pessoas para{" "}
-              <span className="text-primary">transformar comunidades</span>.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Somos uma organização da sociedade civil sem fins lucrativos que concebe, estrutura e
-              executa projetos de impacto social — com gestão transparente e orientada a resultados.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                to="/quem-somos"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-deep"
-              >
-                Conheça o Instituto <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/seja-parceiro"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-              >
-                Seja um parceiro
-              </Link>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -left-6 -top-6 hidden h-24 w-24 items-center justify-center rounded-full bg-accent md:flex">
-              <GrafismoCoracao className="h-12 w-12 text-accent-foreground" />
-            </div>
-            <img
-              src={heroImg}
-              alt="Grupo de pessoas de diferentes idades em uma oficina comunitária do Instituto CRIAS"
-              width={1600}
-              height={1104}
-              className="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl"
-            />
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       <section className="container-crias py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
