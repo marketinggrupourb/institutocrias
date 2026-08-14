@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-primary shadow-sm shadow-primary-deep/20">
+    <header className="sticky top-0 z-50 bg-black shadow-sm shadow-black/40">
       <div className="container-crias flex h-20 items-center justify-between gap-6">
         <Link to="/" className="flex items-center" aria-label="Instituto CRIAS — página inicial">
           <Logo tone="light" />
@@ -55,7 +55,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-primary-foreground/15 bg-primary lg:hidden">
+        <div className="border-t border-primary-foreground/15 bg-black lg:hidden">
           <nav className="container-crias flex flex-col gap-1 py-4" aria-label="Navegação mobile">
             {nav.map((item) => (
               <Link

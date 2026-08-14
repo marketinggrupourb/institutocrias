@@ -5,7 +5,7 @@ import { GrafismosConjunto } from "./Grafismos";
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 overflow-hidden bg-primary-deep text-primary-foreground">
+    <footer className="relative mt-24 overflow-hidden bg-black text-primary-foreground">
       <GrafismosConjunto className="pointer-events-none absolute -bottom-10 right-0 hidden w-[420px] text-primary-foreground/[0.06] lg:block" />
       <div className="container-crias relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
