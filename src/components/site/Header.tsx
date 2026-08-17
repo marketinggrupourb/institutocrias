@@ -7,7 +7,6 @@ const nav = [
   { to: "/quem-somos", label: "Quem somos" },
   { to: "/areas-de-atuacao", label: "Áreas de atuação" },
   { to: "/projetos", label: "Projetos" },
-  { to: "/noticias", label: "Notícias" },
   { to: "/transparencia", label: "Transparência" },
   { to: "/contato", label: "Contato" },
 ] as const;

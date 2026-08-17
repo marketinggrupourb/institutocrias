@@ -22,7 +22,6 @@ export function Footer() {
             <li><Link to="/quem-somos" className="hover:text-accent">Quem somos</Link></li>
             <li><Link to="/areas-de-atuacao" className="hover:text-accent">Áreas de atuação</Link></li>
             <li><Link to="/projetos" className="hover:text-accent">Projetos</Link></li>
-            <li><Link to="/noticias" className="hover:text-accent">Notícias</Link></li>
             <li><Link to="/transparencia" className="hover:text-accent">Transparência</Link></li>
           </ul>
         </div>
