@@ -133,8 +133,8 @@ export function HeroCarousel() {
             loading={index === 0 ? "eager" : "lazy"}
           />
           {/* Gradient overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
         </div>
       ))}
 
