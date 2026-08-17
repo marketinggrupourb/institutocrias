@@ -60,7 +60,7 @@ export function Footer() {
       <div className="border-t border-primary-foreground/15">
         <div className="container-crias flex flex-col gap-2 py-6 text-xs text-primary-foreground/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Instituto CRIAS — Instituto de Criação e Ações Sociais.</p>
-          <p>Ser luz, agentes de transformação.</p>
+          <p>Ser luz, agentes de transformação!</p>
         </div>
       </div>
     </footer>
