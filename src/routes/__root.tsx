@@ -142,6 +142,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <BackToTop />
       </div>
     </QueryClientProvider>
   );
