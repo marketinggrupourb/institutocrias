@@ -7,7 +7,7 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
     <img
       src={src}
       alt="Instituto CRIAS — Instituto de Criação e Ações Sociais"
-      className="h-14 w-auto md:h-16"
+      className="h-[62px] w-auto md:h-[70px]"
     />
   );
 }
