@@ -1,8 +1,8 @@
-import logoDark from "../../assets/logo-crias.png.asset.json";
-import logoLight from "../../assets/logo-crias-light.png.asset.json";
+import logoLight from "../../assets/logo-crias-light.svg";
 
 export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
-  const src = tone === "light" ? logoLight.url : logoDark.url;
+  const src = logoLight;
+  void tone;
   return (
     <img
       src={src}
