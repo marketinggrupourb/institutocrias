@@ -17,7 +17,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent">Navegue</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-accent">Institucional</h2>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/quem-somos" className="hover:text-accent">Quem somos</Link></li>
             <li><Link to="/areas-de-atuacao" className="hover:text-accent">Áreas de atuação</Link></li>
