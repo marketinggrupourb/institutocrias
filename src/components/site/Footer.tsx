@@ -11,8 +11,8 @@ export function Footer() {
         <div>
           <Logo tone="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
-            Instituto de Criação e Ações Sociais. Organização da sociedade civil sem fins
-            lucrativos dedicada à transformação social, inclusão e cidadania.
+            Organização da sociedade civil sem fins lucrativos dedicada à transformação social,
+            inclusão e cidadania.
           </p>
         </div>
 
