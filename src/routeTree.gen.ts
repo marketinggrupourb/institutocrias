@@ -16,6 +16,7 @@ import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as SejaParceiroRouteImport } from './routes/seja-parceiro'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TransparenciaRouteImport } from './routes/transparencia'
 
 const IndexRoute = IndexRouteImport.update({
@@ -53,6 +54,11 @@ const SejaParceiroRoute = SejaParceiroRouteImport.update({
   path: '/seja-parceiro',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TransparenciaRoute = TransparenciaRouteImport.update({
   id: '/transparencia',
   path: '/transparencia',
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/projetos': typeof ProjetosRoute
   '/quem-somos': typeof QuemSomosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRoutesByTo {
@@ -77,6 +84,7 @@ export interface FileRoutesByTo {
   '/projetos': typeof ProjetosRoute
   '/quem-somos': typeof QuemSomosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRoutesById {
@@ -88,6 +96,7 @@ export interface FileRoutesById {
   '/projetos': typeof ProjetosRoute
   '/quem-somos': typeof QuemSomosRoute
   '/seja-parceiro': typeof SejaParceiroRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/transparencia': typeof TransparenciaRoute
 }
 export interface FileRouteTypes {
@@ -100,6 +109,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/quem-somos'
     | '/seja-parceiro'
+    | '/sitemap.xml'
     | '/transparencia'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -110,6 +120,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/quem-somos'
     | '/seja-parceiro'
+    | '/sitemap.xml'
     | '/transparencia'
   id:
     | '__root__'
@@ -120,6 +131,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/quem-somos'
     | '/seja-parceiro'
+    | '/sitemap.xml'
     | '/transparencia'
   fileRoutesById: FileRoutesById
 }
@@ -131,6 +143,7 @@ export interface RootRouteChildren {
   ProjetosRoute: typeof ProjetosRoute
   QuemSomosRoute: typeof QuemSomosRoute
   SejaParceiroRoute: typeof SejaParceiroRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TransparenciaRoute: typeof TransparenciaRoute
 }
 
@@ -185,6 +198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SejaParceiroRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/transparencia': {
       id: '/transparencia'
       path: '/transparencia'
@@ -203,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjetosRoute: ProjetosRoute,
   QuemSomosRoute: QuemSomosRoute,
   SejaParceiroRoute: SejaParceiroRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TransparenciaRoute: TransparenciaRoute,
 }
 export const routeTree = rootRouteImport

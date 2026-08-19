@@ -80,21 +80,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Instituto CRIAS — Criação e Ações Sociais" },
-      {
-        name: "description",
-        content:
-          "Organização da sociedade civil sem fins lucrativos dedicada à transformação social, inclusão, cidadania e geração de oportunidades.",
-      },
       { name: "author", content: "Instituto CRIAS" },
-      { property: "og:title", content: "Instituto CRIAS — Criação e Ações Sociais" },
-      {
-        property: "og:description",
-        content:
-          "Projetos de desenvolvimento social, educação, cultura, esporte, empregabilidade e desenvolvimento territorial.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:site_name", content: "Instituto CRIAS" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -118,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
