@@ -186,26 +186,8 @@ function Index() {
             Todas as notícias <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="container-crias mt-12 grid gap-6 md:grid-cols-2">
-          <article className="rounded-3xl border border-border bg-card p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-              Institucional
-            </p>
-            <h3 className="mt-3 text-xl font-bold">
-              Instituto CRIAS realiza sua primeira ação social
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              A primeira mobilização do Instituto marca o início de uma trajetória dedicada à
-              inclusão, à cidadania e à geração de oportunidades.
-            </p>
-            <Link
-              to="/noticias"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-            >
-              Ler notícia <ArrowRight className="h-4 w-4" />
-            </Link>
-          </article>
-          <article className="rounded-3xl border border-dashed border-border p-8">
+        <div className="container-crias mt-12">
+          <article className="mx-auto max-w-xl rounded-3xl border border-dashed border-border p-8 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               Em breve
             </p>
@@ -213,7 +195,7 @@ function Index() {
               Novos conteúdos institucionais
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Resultados, indicadores de impacto e bastidores dos projetos serão publicados aqui.
+              Ações, resultados, indicadores de impacto e bastidores dos projetos serão publicados aqui.
             </p>
           </article>
         </div>
