@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { InstituicoesParceiras } from "@/components/site/InstituicoesParceiras";
 import educacaoImg from "@/assets/educacao.jpg";
 import esporteImg from "@/assets/esporte.jpg";
 import culturaImg from "@/assets/cultura.jpg";
@@ -80,6 +81,8 @@ function Projetos() {
           </article>
         ))}
       </section>
+
+      <InstituicoesParceiras />
 
       <CtaBand />
       <div className="h-20" />
