@@ -15,11 +15,11 @@ export const instituicoesParceiras: InstituicaoParceira[] = [
   {
     nome: "Associação Anjo Rafael",
     logo: anjoRafaelLogo,
-    link: "", // TODO: adicionar link do Instagram
+    link: "https://www.instagram.com/associacaoanjorafael/",
   },
   {
     nome: "Bacuras Solidários",
     logo: bacurasSolidariosLogo,
-    link: "", // TODO: adicionar link do Instagram
+    link: "https://www.instagram.com/bacuras_solidarios/",
   },
 ];
