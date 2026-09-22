@@ -4,6 +4,8 @@ import { CtaBand } from "@/components/site/CtaBand";
 import { Search, ClipboardList, Rocket, BarChart3, FileCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import heroImg from "@/assets/hero-crias.jpg";
+import raphaelBioImg from "@/assets/presidencia/raphael-loureiro-bio.jpg";
+import raphaelRomariaImg from "@/assets/presidencia/raphael-loureiro-romaria.jpg";
 
 const title = "Quem somos | Instituto CRIAS";
 const description =
@@ -52,6 +54,61 @@ function QuemSomos() {
             organizações e comunidades, por meio de ações nas áreas de desenvolvimento social,
             educação, cultura, esporte, qualificação profissional e desenvolvimento territorial.
           </p>
+        </div>
+      </section>
+
+      <section className="container-crias grid gap-14 py-20 md:py-28 lg:grid-cols-2">
+        <div className="lg:order-2">
+          <img
+            src={raphaelBioImg}
+            alt="Raphael Loureiro, presidente do Instituto CRIAS"
+            loading="lazy"
+            width={852}
+            height={1280}
+            className="aspect-[3/4] w-full rounded-[2rem] object-cover"
+          />
+        </div>
+        <div className="lg:order-1">
+          <p className="eyebrow">Presidência</p>
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">
+            Conheça Raphael Loureiro, presidente do Instituto CRIAS.
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            Cristão católico, marido e pai de dois filhos, é guiado pelos valores e ensinamentos
+            de Jesus e encontra no amor e no cuidado com o próximo a principal expressão de sua
+            fé.
+          </p>
+          <p className="mt-5 leading-relaxed text-muted-foreground">
+            Acredita que a construção de uma sociedade melhor começa quando cada pessoa assume a
+            responsabilidade de fazer a sua parte. Por isso, busca transformar sua fé em atitudes
+            concretas. É idealizador do Bacuras Solidários, movimento de homens católicos fundado
+            em 2020, que já distribuiu mais de 200 mil marmitas a pessoas em situação de
+            vulnerabilidade.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-24 text-primary-foreground md:py-32">
+        <img
+          src={raphaelRomariaImg}
+          alt="Raphael Loureiro caminhando em romaria franciscana"
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary-deep/85" />
+        <div className="container-crias relative">
+          <p className="max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
+            Romeiro franciscano há quase dez anos, Raphael encontra nessa caminhada os valores da
+            caridade, da misericórdia e da humildade no servir, princípios que também orientam sua
+            atuação à frente do Instituto CRIAS.
+          </p>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
+            É na Oração de São Francisco que encontra a síntese do propósito que conduz sua
+            trajetória:
+          </p>
+          <blockquote className="mt-8 max-w-3xl font-display text-2xl font-extrabold leading-[1.3] text-accent md:text-3xl">
+            "Senhor, fazei-me um instrumento de vossa paz."
+          </blockquote>
         </div>
       </section>
 
