@@ -58,14 +58,14 @@ function QuemSomos() {
       </section>
 
       <section className="container-crias grid gap-14 py-20 md:py-28 lg:grid-cols-2">
-        <div className="lg:order-2">
+        <div className="lg:order-2 lg:h-full">
           <img
             src={raphaelBioImg}
             alt="Raphael Loureiro, presidente do Instituto CRIAS"
             loading="lazy"
             width={852}
             height={1280}
-            className="aspect-[3/4] w-full rounded-[2rem] object-cover"
+            className="aspect-[3/4] h-auto w-full rounded-[2rem] object-cover lg:aspect-auto lg:h-full"
           />
         </div>
         <div className="lg:order-1">
@@ -88,14 +88,14 @@ function QuemSomos() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24 text-primary-foreground md:py-32">
+      <section className="relative overflow-hidden bg-primary-deep py-24 text-primary-foreground md:py-32">
         <img
           src={raphaelRomariaImg}
           alt="Raphael Loureiro caminhando em romaria franciscana"
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-contain opacity-35 md:object-right"
         />
-        <div className="absolute inset-0 bg-primary-deep/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/95 to-primary-deep/40" />
         <div className="container-crias relative">
           <p className="max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
             Romeiro franciscano há quase dez anos, Raphael encontra nessa caminhada os valores da
