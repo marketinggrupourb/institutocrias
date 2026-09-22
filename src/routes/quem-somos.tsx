@@ -6,6 +6,7 @@ import type { LucideIcon } from "lucide-react";
 import heroImg from "@/assets/hero-crias.jpg";
 import raphaelBioImg from "@/assets/presidencia/raphael-loureiro-bio.jpg";
 import raphaelRomariaImg from "@/assets/presidencia/raphael-loureiro-romaria.jpg";
+import raphaelBannerImg from "@/assets/presidencia/raphael-loureiro-banner.jpg";
 
 const title = "Quem somos | Instituto CRIAS";
 const description =
@@ -104,13 +105,21 @@ function QuemSomos() {
           </blockquote>
         </div>
 
+        <div className="px-6 md:hidden">
+          <img
+            src={raphaelRomariaImg}
+            alt="Raphael Loureiro caminhando em romaria franciscana"
+            loading="lazy"
+            className="relative z-0 mx-auto mt-10 aspect-[1179/1146] w-full max-w-[260px] rounded-[2rem] object-cover"
+          />
+        </div>
+
         <img
-          src={raphaelRomariaImg}
+          src={raphaelBannerImg}
           alt="Raphael Loureiro caminhando em romaria franciscana"
           loading="lazy"
-          className="relative z-0 mx-auto mt-10 aspect-[1179/1146] w-full max-w-md rounded-[2rem] object-cover md:absolute md:inset-0 md:z-0 md:mt-0 md:h-full md:w-full md:max-w-none md:rounded-none md:aspect-auto"
+          className="absolute inset-0 z-0 hidden h-full w-full object-cover object-right md:block"
         />
-        <div className="pointer-events-none absolute inset-0 z-[1] hidden bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(0,0,0,0.92)_100%)] md:block" />
       </section>
 
       <section className="bg-primary py-20 text-primary-foreground md:py-28">
