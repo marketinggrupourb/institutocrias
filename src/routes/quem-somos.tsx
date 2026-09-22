@@ -31,7 +31,7 @@ function QuemSomos() {
     <>
       <PageHero
         eyebrow="Sobre nós"
-        title="Ser luz, agentes de transformação."
+        title="CRIAS"
         description="O Instituto CRIAS – Instituto de Criação e Ações Sociais é uma organização da sociedade civil, sem fins lucrativos, dedicada ao desenvolvimento de iniciativas que promovam transformação social, inclusão, cidadania e geração de oportunidades."
       />
 
@@ -55,6 +55,19 @@ function QuemSomos() {
             organizações e comunidades, por meio de ações nas áreas de desenvolvimento social,
             educação, cultura, esporte, qualificação profissional e desenvolvimento territorial.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-primary py-20 text-primary-foreground md:py-28">
+        <div className="container-crias">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Propósito</p>
+          <blockquote className="mt-6 max-w-4xl font-display text-3xl font-extrabold leading-[1.2] text-accent md:text-5xl">
+            Ser luz, agentes de transformação, <br />
+            doadores de conhecimento, <br />
+            servidores de coração, <br />
+            propagadores da esperança e do amor, <br />
+            ponte que conecta criatura e criador.
+          </blockquote>
         </div>
       </section>
 
@@ -120,19 +133,6 @@ function QuemSomos() {
           loading="lazy"
           className="absolute inset-0 z-0 hidden h-full w-full object-cover object-right md:block"
         />
-      </section>
-
-      <section className="bg-primary py-20 text-primary-foreground md:py-28">
-        <div className="container-crias">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Propósito</p>
-          <blockquote className="mt-6 max-w-4xl font-display text-3xl font-extrabold leading-[1.2] text-accent md:text-5xl">
-            Ser luz, agentes de transformação, <br />
-            doadores de conhecimento, <br />
-            servidores de coração, <br />
-            propagadores da esperança e do amor, <br />
-            ponte que conecta criatura e criador.
-          </blockquote>
-        </div>
       </section>
 
       <section className="container-crias py-20 md:py-28">
