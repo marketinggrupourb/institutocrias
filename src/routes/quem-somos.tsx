@@ -58,14 +58,14 @@ function QuemSomos() {
       </section>
 
       <section className="container-crias grid gap-14 py-20 md:py-28 lg:grid-cols-2">
-        <div className="lg:order-2 lg:h-full">
+        <div className="flex lg:order-2 lg:items-center lg:justify-center">
           <img
             src={raphaelBioImg}
             alt="Raphael Loureiro, presidente do Instituto CRIAS"
             loading="lazy"
             width={852}
             height={1280}
-            className="aspect-[3/4] h-auto w-full rounded-[2rem] object-cover lg:aspect-auto lg:h-full"
+            className="aspect-[3/4] w-full max-w-[260px] rounded-[2rem] object-cover md:max-w-[300px]"
           />
         </div>
         <div className="lg:order-1">
@@ -88,15 +88,8 @@ function QuemSomos() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-primary-deep py-24 text-primary-foreground md:py-32">
-        <img
-          src={raphaelRomariaImg}
-          alt="Raphael Loureiro caminhando em romaria franciscana"
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-contain opacity-35 md:object-right"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/95 to-primary-deep/40" />
-        <div className="container-crias relative">
+      <section className="relative overflow-hidden bg-black py-16 text-primary-foreground md:py-32">
+        <div className="container-crias relative z-10">
           <p className="max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
             Romeiro franciscano há quase dez anos, Raphael encontra nessa caminhada os valores da
             caridade, da misericórdia e da humildade no servir, princípios que também orientam sua
@@ -110,6 +103,14 @@ function QuemSomos() {
             "Senhor, fazei-me um instrumento de vossa paz."
           </blockquote>
         </div>
+
+        <img
+          src={raphaelRomariaImg}
+          alt="Raphael Loureiro caminhando em romaria franciscana"
+          loading="lazy"
+          className="relative z-0 mx-auto mt-10 aspect-[1179/1146] w-full max-w-md rounded-[2rem] object-cover md:absolute md:inset-0 md:z-0 md:mt-0 md:h-full md:w-full md:max-w-none md:rounded-none md:aspect-auto"
+        />
+        <div className="pointer-events-none absolute inset-0 z-[1] hidden bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(0,0,0,0.92)_100%)] md:block" />
       </section>
 
       <section className="bg-primary py-20 text-primary-foreground md:py-28">
