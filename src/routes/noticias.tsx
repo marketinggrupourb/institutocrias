@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
-import heroImg from "@/assets/hero-crias.jpg";
 import { GaleriaFotos } from "@/components/site/GaleriaFotos";
-import { galeriaPrimeiraAcao } from "@/data/galeria-primeira-acao";
+import { galeriaPrimeiraAcao, capaPrimeiraAcao } from "@/data/galeria-primeira-acao";
 
 const title = "Notícias | Instituto CRIAS";
 const description =
@@ -35,8 +34,8 @@ function Noticias() {
       <section className="container-crias py-20 md:py-28">
         <article className="overflow-hidden rounded-[2rem] border border-border bg-card">
           <img
-            src={heroImg}
-            alt="Ação social do Instituto CRIAS com a comunidade"
+            src={capaPrimeiraAcao}
+            alt="Cestas básicas com a marca do Instituto CRIAS organizadas para a doação"
             loading="lazy"
             width={1600}
             height={1104}

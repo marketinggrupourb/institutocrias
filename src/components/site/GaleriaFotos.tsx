@@ -42,25 +42,51 @@ export function GaleriaFotos({ fotos, titulo }: { fotos: FotoGaleria[]; titulo?:
       ) : null}
 
       <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
-        {fotos.map((foto, i) => (
-          <li key={foto.src} className={i === 0 ? "col-span-2 md:col-span-2 md:row-span-2" : ""}>
-            <button
-              type="button"
-              onClick={() => setIndice(i)}
-              aria-label={`Ampliar foto ${i + 1} de ${fotos.length}: ${foto.alt}`}
-              className="group block h-full w-full overflow-hidden rounded-2xl bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            >
-              <img
-                src={foto.src}
-                alt={foto.alt}
-                loading="lazy"
-                className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                  i === 0 ? "aspect-[16/10] md:h-full md:aspect-auto" : "aspect-[4/3]"
-                }`}
-              />
-            </button>
-          </li>
-        ))}
+        {fotos.map((foto, i) => {
+          const destaque = i === 0;
+          const ultima = i === fotos.length - 1 && !destaque;
+          // Fotos fora da foto em destaque: no celular a grade tem 2 colunas;
+          // no desktop, 3 colunas (a foto em destaque ocupa 2x2).
+          const outras = fotos.length - 1;
+          const sobraMobile = ultima && outras % 2 === 1;
+          const sobraDesktop = outras >= 2 ? (outras - 2) % 3 : 0;
+          const ultimaOcupa3 = ultima && sobraDesktop === 1;
+          const ultimaOcupa2 = ultima && sobraDesktop === 2;
+
+          const itemClasses = [
+            destaque ? "col-span-2 md:col-span-2 md:row-span-2" : "",
+            sobraMobile ? "col-span-2" : "",
+            ultimaOcupa3 ? "md:col-span-3" : "",
+            ultimaOcupa2 ? "md:col-span-2" : "",
+            sobraMobile && !ultimaOcupa3 && !ultimaOcupa2 ? "md:col-span-1" : "",
+          ].join(" ");
+
+          const imgAspect = destaque
+            ? "aspect-[16/10] md:h-full md:aspect-auto"
+            : ultimaOcupa3
+              ? "aspect-[4/3] md:aspect-[21/9]"
+              : sobraMobile
+                ? "aspect-[16/9] md:aspect-[4/3]"
+                : "aspect-[4/3]";
+
+          return (
+            <li key={foto.src} className={itemClasses}>
+              <button
+                type="button"
+                onClick={() => setIndice(i)}
+                aria-label={`Ampliar foto ${i + 1} de ${fotos.length}: ${foto.alt}`}
+                className="group block h-full w-full overflow-hidden rounded-2xl bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
+                <img
+                  src={foto.src}
+                  alt={foto.alt}
+                  loading="lazy"
+                  className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${imgAspect}`}
+                />
+              </button>
+            </li>
+          );
+        })}
       </ul>
 
       <Dialog open={aberta} onOpenChange={(o) => !o && setIndice(null)}>
