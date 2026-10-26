@@ -51,5 +51,6 @@ export const galeriaPrimeiraAcao: FotoGaleria[] = [
 
 // Foto de capa da matéria: aparece no topo da página /noticias e na prévia da home
 // (também está na galeria). Para trocar, aponte para outra das fotos importadas acima.
-export const capaPrimeiraAcao = foto06;
-export const capaPrimeiraAcaoAlt = "Detalhe das cestas básicas com o cartão do Instituto CRIAS";
+export const capaPrimeiraAcao = foto05;
+export const capaPrimeiraAcaoAlt =
+  "Cestas básicas com a marca do Instituto CRIAS organizadas sobre a mesa";
