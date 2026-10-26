@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
 import heroImg from "@/assets/hero-crias.jpg";
+import { GaleriaFotos } from "@/components/site/GaleriaFotos";
+import { galeriaPrimeiraAcao } from "@/data/galeria-primeira-acao";
 
 const title = "Notícias | Instituto CRIAS";
 const description =
@@ -53,6 +55,9 @@ function Noticias() {
               necessidades reais da comunidade. A ação marca o início de uma trajetória dedicada à
               inclusão, à cidadania e à geração de oportunidades.
             </p>
+          </div>
+          <div className="border-t border-border p-8 md:p-12">
+            <GaleriaFotos fotos={galeriaPrimeiraAcao} titulo="Registros da primeira ação" />
           </div>
         </article>
 
