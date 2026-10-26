@@ -6,7 +6,6 @@ import { Logo } from "./Logo";
 const nav = [
   { to: "/quem-somos", label: "Quem somos" },
   { to: "/areas-de-atuacao", label: "Áreas de atuação" },
-  { to: "/projetos", label: "Projetos" },
   { to: "/transparencia", label: "Transparência" },
   { to: "/contato", label: "Contato" },
 ] as const;

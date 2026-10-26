@@ -42,7 +42,6 @@ const slides: Slide[] = [
     description:
       "Cursos, oficinas e trilhas de qualificação profissional para jovens e adultos em territórios vulneráveis.",
     primaryLink: { to: "/areas-de-atuacao", label: "Áreas de atuação" },
-    secondaryLink: { to: "/projetos", label: "Ver projetos" },
   },
   {
     img: esporteImg,
@@ -56,7 +55,6 @@ const slides: Slide[] = [
     description:
       "Formação esportiva e eventos comunitários como caminho de convivência, cidadania e desenvolvimento integral.",
     primaryLink: { to: "/areas-de-atuacao", label: "Áreas de atuação" },
-    secondaryLink: { to: "/projetos", label: "Ver projetos" },
   },
   {
     img: culturaImg,
@@ -70,7 +68,6 @@ const slides: Slide[] = [
     description:
       "Festivais, produção cultural e valorização do patrimônio das comunidades como motor de identidade e renda.",
     primaryLink: { to: "/areas-de-atuacao", label: "Áreas de atuação" },
-    secondaryLink: { to: "/projetos", label: "Ver projetos" },
   },
 ];
 

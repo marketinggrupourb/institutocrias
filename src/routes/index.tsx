@@ -3,9 +3,6 @@ import { ArrowRight, ArrowUpRight, Heart, GraduationCap, Palette, Trophy, Briefc
 import { HeroCarousel } from "@/components/site/HeroCarousel";
 import { CtaBand } from "@/components/site/CtaBand";
 import type { LucideIcon } from "lucide-react";
-import educacaoImg from "@/assets/educacao.jpg";
-import esporteImg from "@/assets/esporte.jpg";
-import culturaImg from "@/assets/cultura.jpg";
 import { capaPrimeiraAcao } from "@/data/galeria-primeira-acao";
 
 const title = "Instituto CRIAS — Criação e Ações Sociais";
@@ -100,76 +97,6 @@ function Index() {
             Ver todas as áreas <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
-      </section>
-
-      <section className="container-crias py-20 md:py-28">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow">Projetos</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">
-              Projetos em destaque
-            </h2>
-          </div>
-          <Link
-            to="/projetos"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-          >
-            Ver todos os projetos <ArrowUpRight className="h-4 w-4" />
-          </Link>
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {[
-            {
-              img: educacaoImg,
-              tag: "Educação",
-              name: "Formação e capacitação",
-              text: "Trilhas de qualificação profissional para jovens e adultos em territórios vulneráveis.",
-            },
-            {
-              img: esporteImg,
-              tag: "Esporte",
-              name: "Esporte que inclui",
-              text: "Formação esportiva e eventos comunitários como caminho de convivência e cidadania.",
-            },
-            {
-              img: culturaImg,
-              tag: "Cultura",
-              name: "Cultura e economia criativa",
-              text: "Festivais, produção cultural e valorização do patrimônio das comunidades.",
-            },
-          ].map((p) => (
-            <article
-              key={p.name}
-              className="group overflow-hidden rounded-3xl border border-border bg-card"
-            >
-              <img
-                src={p.img}
-                alt={p.name}
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-              <div className="p-7">
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  {p.tag}
-                </span>
-                <h3 className="mt-3 text-xl font-bold">{p.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-                <Link
-                  to="/projetos"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                >
-                  Saiba mais <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-        <p className="mt-8 text-sm text-muted-foreground">
-          Frentes em estruturação — em breve novos projetos serão publicados nesta área.
-        </p>
       </section>
 
       <section className="border-y border-border bg-secondary/50 py-20 md:py-28">
