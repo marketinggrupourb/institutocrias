@@ -2,7 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
 import { GaleriaFotos } from "@/components/site/GaleriaFotos";
-import { galeriaPrimeiraAcao, capaPrimeiraAcao } from "@/data/galeria-primeira-acao";
+import {
+  galeriaPrimeiraAcao,
+  capaPrimeiraAcao,
+  capaPrimeiraAcaoAlt,
+} from "@/data/galeria-primeira-acao";
 
 const title = "Notícias | Instituto CRIAS";
 const description =
@@ -35,7 +39,7 @@ function Noticias() {
         <article className="overflow-hidden rounded-[2rem] border border-border bg-card">
           <img
             src={capaPrimeiraAcao}
-            alt="Cestas básicas com a marca do Instituto CRIAS organizadas para a doação"
+            alt={capaPrimeiraAcaoAlt}
             loading="lazy"
             width={1600}
             height={1104}
@@ -55,17 +59,15 @@ function Noticias() {
             <div className="mt-6 max-w-3xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
                 O Instituto CRIAS doou 50 cestas básicas à Associação Anjo Rafael, em uma ação
-                realizada no dia 29 de agosto de 2026, no restaurante Pagode da Diretoria, no
-                bairro Meireles, em Fortaleza. A iniciativa contou com a intermediação do
-                movimento Bacuras Solidários, responsável por conectar o Instituto à instituição
-                beneficiada.
+                realizada no dia 29 de agosto de 2026, no restaurante Pagode da Diretoria, no bairro
+                Meireles, em Fortaleza. A iniciativa contou com a intermediação do movimento Bacuras
+                Solidários, responsável por conectar o Instituto à instituição beneficiada.
               </p>
               <p>
                 A parceria surgiu a partir da aproximação do CRIAS com os Bacuras Solidários, com o
-                objetivo de contribuir para uma ação de combate à fome já programada pelo
-                movimento. A partir dessa mobilização, a Associação Anjo Rafael foi indicada para
-                receber as doações, destinadas ao apoio de famílias em situação de vulnerabilidade
-                social.
+                objetivo de contribuir para uma ação de combate à fome já programada pelo movimento.
+                A partir dessa mobilização, a Associação Anjo Rafael foi indicada para receber as
+                doações, destinadas ao apoio de famílias em situação de vulnerabilidade social.
               </p>
               <p>
                 Além da entrega das 50 cestas básicas, o Instituto CRIAS também participou do
@@ -81,10 +83,10 @@ function Noticias() {
               </blockquote>
               <p>
                 O Instituto CRIAS nasceu com o propósito de levar luz e esperança aos mais
-                necessitados, transformando boas intenções em ações concretas. A instituição
-                seguirá trabalhando para desenvolver projetos sociais, fortalecer parcerias e
-                mobilizar pessoas em torno de uma causa essencial: fazer a diferença na vida de
-                quem mais precisa.
+                necessitados, transformando boas intenções em ações concretas. A instituição seguirá
+                trabalhando para desenvolver projetos sociais, fortalecer parcerias e mobilizar
+                pessoas em torno de uma causa essencial: fazer a diferença na vida de quem mais
+                precisa.
               </p>
             </div>
           </div>

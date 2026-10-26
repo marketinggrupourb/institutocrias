@@ -6,6 +6,7 @@ import type { LucideIcon } from "lucide-react";
 import educacaoImg from "@/assets/educacao.jpg";
 import esporteImg from "@/assets/esporte.jpg";
 import culturaImg from "@/assets/cultura.jpg";
+import { capaPrimeiraAcao } from "@/data/galeria-primeira-acao";
 
 const title = "Instituto CRIAS — Criação e Ações Sociais";
 const description =
@@ -187,23 +188,33 @@ function Index() {
           </Link>
         </div>
         <div className="container-crias mt-12 grid gap-6 md:grid-cols-2">
-          <article className="rounded-3xl border border-border bg-card p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-              Institucional
-            </p>
-            <h3 className="mt-3 text-xl font-bold">
-              Instituto CRIAS doa 50 cestas básicas à Associação Anjo Rafael
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Em parceria com os Bacuras Solidários, a ação em Fortaleza também contou com o
-              preparo e a montagem de 1.800 marmitas.
-            </p>
-            <Link
-              to="/noticias"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-            >
-              Ler notícia <ArrowRight className="h-4 w-4" />
+          <article className="overflow-hidden rounded-3xl border border-border bg-card">
+            <Link to="/noticias" tabIndex={-1} aria-hidden="true" className="block">
+              <img
+                src={capaPrimeiraAcao}
+                alt=""
+                loading="lazy"
+                className="aspect-[16/9] w-full object-cover"
+              />
             </Link>
+            <div className="p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                Institucional
+              </p>
+              <h3 className="mt-3 text-xl font-bold">
+                Instituto CRIAS doa 50 cestas básicas à Associação Anjo Rafael
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Em parceria com os Bacuras Solidários, a ação em Fortaleza também contou com o
+                preparo e a montagem de 1.800 marmitas.
+              </p>
+              <Link
+                to="/noticias"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              >
+                Ler notícia <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </article>
           <article className="rounded-3xl border border-dashed border-border p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">

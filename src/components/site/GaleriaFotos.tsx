@@ -65,9 +65,11 @@ export function GaleriaFotos({ fotos, titulo }: { fotos: FotoGaleria[]; titulo?:
             ? "aspect-[16/10] md:h-full md:aspect-auto"
             : ultimaOcupa3
               ? "aspect-[4/3] md:aspect-[21/9]"
-              : sobraMobile
-                ? "aspect-[16/9] md:aspect-[4/3]"
-                : "aspect-[4/3]";
+              : ultimaOcupa2
+                ? "aspect-[4/3] md:aspect-[11/4]"
+                : sobraMobile
+                  ? "aspect-[16/9] md:aspect-[4/3]"
+                  : "aspect-[4/3]";
 
           return (
             <li key={foto.src} className={itemClasses}>
