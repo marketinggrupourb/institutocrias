@@ -3,7 +3,7 @@ import { instituicoesParceiras } from "@/data/instituicoes-parceiras";
 
 export function InstituicoesParceiras() {
   return (
-    <section className="border-y border-border bg-secondary/50 py-20 md:py-28">
+    <section className="py-20 md:py-28">
       <div className="container-crias">
         <p className="eyebrow">Instituições parceiras</p>
         <h2 className="mt-4 max-w-2xl text-3xl font-extrabold leading-tight md:text-4xl">

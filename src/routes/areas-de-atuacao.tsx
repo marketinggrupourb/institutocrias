@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBand } from "@/components/site/CtaBand";
+import { InstituicoesParceiras } from "@/components/site/InstituicoesParceiras";
 import { Heart, GraduationCap, Palette, Trophy, Briefcase, MapPin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -77,6 +78,8 @@ function Areas() {
           );
         })}
       </section>
+
+      <InstituicoesParceiras />
 
       <section className="border-y border-border bg-secondary/50 py-20 md:py-24">
         <div className="container-crias grid gap-10 lg:grid-cols-2">
