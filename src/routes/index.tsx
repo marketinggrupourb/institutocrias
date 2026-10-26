@@ -192,11 +192,11 @@ function Index() {
               Institucional
             </p>
             <h3 className="mt-3 text-xl font-bold">
-              Instituto CRIAS realiza sua primeira ação social
+              Instituto CRIAS doa 50 cestas básicas à Associação Anjo Rafael
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              A primeira mobilização do Instituto marca o início de uma trajetória dedicada à
-              inclusão, à cidadania e à geração de oportunidades.
+              Em parceria com os Bacuras Solidários, a ação em Fortaleza também contou com o
+              preparo e a montagem de 1.800 marmitas.
             </p>
             <Link
               to="/noticias"
